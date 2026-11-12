@@ -1,0 +1,27 @@
+# About Node.js Modules
+
+This project demonstrates the concept of modules in Node.js.
+
+Node.js supports two main module systems:
+
+1. CommonJS (CJS)
+   - Uses require() to import modules.
+   - Uses module.exports to export modules.
+
+2. ECMAScript Modules (ESM)
+   - Uses import to import modules.
+   - Uses export and export default to export modules.
+
+Topics Covered:
+- Creating custom modules
+- Named exports
+- Default exports
+- Importing and exporting functions
+- Understanding package.json
+- Working with the Node.js File System module
+
+Purpose:
+To understand how Node.js modules work and how to organize JavaScript code into reusable files.
+/n BY /n UTPAL SONOWAL
+ BY 
+ UTPAL SONOWAL
