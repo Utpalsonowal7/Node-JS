@@ -13,7 +13,9 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-     console.log('new user connected', socket.id)
+     socket.on("user-msg", (v) => {
+          io.emit("msg", v)
+     })
 })
 
 server.listen(8000, () => console.log("✅ server is running at port 8000"));
