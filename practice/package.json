@@ -1,0 +1,12 @@
+{
+  "name": "node-js-mastery-practice",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "core": "node solutions/javascript.js",
+    "async": "node solutions/async.js",
+    "node-core": "node solutions/node-core.js",
+    "http": "node solutions/http-api.js",
+    "streams": "node solutions/streams.js"
+  }
+}
