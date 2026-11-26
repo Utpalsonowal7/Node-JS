@@ -23,15 +23,7 @@ export function summarizeTasks(tasks) {
 
 async function main() {
   const file = process.argv[2];
-  if (!file) {
-    const example = [
-      { title: "Read Node docs", status: "done" },
-      { title: "Build a CLI", status: "open" }
-    ];
-    console.log(JSON.stringify(summarizeTasks(example), null, 2));
-    console.log("Usage: node solutions/node-core.js <json-file>");
-    return;
-  }
+  if (!file) throw new Error("Usage: node solutions/node-core.js <json-file>");
 
   const text = await readFile(resolve(file), "utf8");
   const parsed = JSON.parse(text);
