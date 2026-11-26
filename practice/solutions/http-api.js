@@ -83,15 +83,13 @@ export function createTaskServer() {
         throw httpError(405, "Method not allowed");
       }
 
-      const match = /^\\/tasks\\/([a-f0-9-]+)$/i.exec(url.pathname);
-      if (!match) throw httpError(404, "Route not found");
-
-      if (!["GET", "PATCH", "DELETE"].includes(request.method)) {
-        response.setHeader("allow", "GET, PATCH, DELETE");
-        throw httpError(405, "Method not allowed");
+      const taskPrefix = "/tasks/";
+      if (!url.pathname.startsWith(taskPrefix)) throw httpError(404, "Route not found");
+      const id = url.pathname.slice(taskPrefix.length);
+      if (id.includes("/") || !/^[a-f0-9-]+$/i.test(id)) {
+        throw httpError(404, "Route not found");
       }
 
-      const id = match[1];
       const task = tasks.get(id);
       if (!task) throw httpError(404, "Task not found");
 
