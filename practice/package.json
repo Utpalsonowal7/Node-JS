@@ -5,7 +5,7 @@
   "scripts": {
     "core": "node solutions/javascript.js",
     "async": "node solutions/async.js",
-    "node-core": "node solutions/node-core.js",
+    "node-core": "node solutions/node-core.js fixtures/tasks.json",
     "http": "node solutions/http-api.js",
     "streams": "node solutions/streams.js"
   }
